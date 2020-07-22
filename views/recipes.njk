@@ -1,83 +1,32 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <link rel="stylesheet" href="recipes.css">     
+    <link rel="stylesheet" type="text/css" href="/recipes.css"/>   
 {% endblock %}
 
 {% block content %}
                 <main>
                     
-                    <div class="cards">
+                   <img class="recipe-img"src="{{item.image}}" alt="">
+                   <p class="title">{{item.title}}</p>
+                  <p class="author">por {{item.author}}</p>
 
+
+                    <p class="sub-itens">Ingredientes<button> Mostrar</button> </p> 
+                    <p class="information">
+                    {%for ingredient in item.ingredients%}
+                    <li>{{ingredient}};</li>
+                     {% endfor %}
+                     </p> 
+
+                    <p class="sub-itens">Modo Preparo <button> Mostrar</button></p> 
+                    <p class="information">{{item.preparation}}</p>
                         
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                    
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                    
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                    
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                    
-                        <div class="card">
-                            <img src="./assets/asinhas.png" alt="">
-                            <p class="food-name">Triplo burguer bacon</p>
-                            <p class="chef-name">Por Jurema Atalaia</p>
-                        </div>
-                    
-                    
 
-                    </div>
+                    <p class="sub-itens">Informações Adicionais <button> Mostrar</button></p> 
+                    <p class="information"> {{item.information}}</p>
+                    
+                   
                 </main>
             
 {% endblock %}

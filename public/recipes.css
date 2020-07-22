@@ -16,6 +16,9 @@ body{
     
 }
 
+button{
+    margin-left: 50px;
+}
 
 .page-content{
     height: 100%;
@@ -26,6 +29,8 @@ body{
     display: grid;
     grid-template-columns: 940px;
     justify-content: center;
+    min-height: 1000px;
+    
     
 }
 
@@ -60,42 +65,40 @@ header .menu .menu-recipes{
     
 }
 
-
-
-.cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    top: 0;
-    
-    
-}
-
-.card{
-    
-    height: 232px;
-}
-
-.card img{
-    width: 300px;
-    height: 140px;
+.recipe-img{
+    width: 940px;
+    height: 280px;
     border-radius: 15px;
-    text-align: center;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.author{
+    font-size: 20px;
+    color: #777777;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.information{
     
 }
 
-.card .food-name{
-    font-size: 18px;
+.sub-itens{
+    font-weight: bold;
+    font-size: 24px;
     color: #111111;
-    margin-top: 18px;
+    margin: 20px 0 20px;
 }
 
-.card .chef-name{
-    margin-top: 5px;
-    font-size: 14px;
-    color: #777777;
-
-}
 
 footer{
     background-color: #EEEEEE;
@@ -105,6 +108,8 @@ footer{
     justify-content: center;
     font-size: 14px;
     color: #999999;
+  
+    
 }
 
 
